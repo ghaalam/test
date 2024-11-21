@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exotic Travelers</title>
+    <link rel="stylesheet" href="../styles/web.css" type="text/css" />
+    <script type="text/javascript" src="../scripts/CSJSRequestObject.js"></script>
+</head>
+<body>
+
+<div id="divContainer">
+    <img id="imgHeader" src="../images/header_wide2.jpg" />
+    <img id="imgFondo" src="../images/fondo_wide2_1920x980.jpg" />
+    <img id="bFiveWhys" src="../images/tools/b_tools.jpg" onclick="go(this.id, 'tools.htm')" />
+    <img id="b1" src="../images/Tools/b_tools_usmatrix.jpg" onclick="go('this.id, matrix.htm?lan=us')" />
+    <img id="b2" src="../images/Tools/b_tools_ukmatrix.jpg" onclick="go('this.id, matrix.htm?lan=uk')" />
+    <img id="b3" src="../images/Tools/b_tools_vacationcalculator.jpg" onclick="go(this.id, 'calculator.htm')" />
+    <img id="img2" src="../images/fondo_wide2_1920x980.jpg" />  
+    <div id="divMain">
+      <img id="imgMain" src="../images/tools/calculators/screen calculator_wide.jpg" style="position: relative; top:0px; left:10px" />  
+    </div>
+
+  <input id="t1" class="numbers" onfocus="gotFocus(this.id)" style="position: fixed;top: 289px;left: 1155px; width:245px; height:52px;z-index:1; border: none" />
+  <input id="year" class="numbers" onfocus="gotFocus(this.id)" style="position: fixed;top: 409px;left: 1155px; width:245px; height:52px;z-index:1; border: none" />
+  <input id="t2" class="numbers" onfocus="gotFocus(this.id)" style="position: fixed;top: 529px;left: 1155px; width:245px; height:52px;z-index:1; border: none" /> 
+  <input id="r1" class="totals" style="position: fixed;top: 648px;left: 1155px; width:245px; height:60px;z-index:1; border: none" /> 
+
+  <div id="divSeven" onclick="press('7')" style="position: fixed;top: 330px;left: 1445px; width:85px; height:80px;z-index:1"><img id="7" src="../images/Tools/calculators/siete_off.png" style="visibility: hidden" /></div> 
+  <div id="divEight" onclick="press('8')" style="position: fixed;top: 330px;left: 1540px; width:85px; height:80px;z-index:1"><img id="8" src="../images/Tools/calculators/ocho_off.png" style="visibility: hidden" /></div> 
+  <div id="divNine" onclick="press('9')" style="position: fixed;top: 330px;left: 1635px; width:85px; height:80px;z-index:1"><img id="9" src="../images/Tools/calculators/nueve_off.png" style="visibility: hidden" /></div> 
+  <div id="divC" onclick="press('C')" style="position: fixed;top: 330px;left: 1734px; width:85px; height:80px;z-index:1"><img id="C" src="../images/Tools/calculators/borrar_off.png" style="visibility: hidden" /></div> 
+  <div id="divFour" onclick="press('4')" style="position: fixed;top: 435px;left: 1445px; width:85px; height:80px;z-index:1"><img id="4" src="../images/Tools/calculators/cuatro_off.png" style="visibility: hidden" /></div> 
+  <div id="divFive" onclick="press('5')" style="position: fixed;top: 435px;left: 1540px; width:85px; height:80px;z-index:1"><img id="5" src="../images/Tools/calculators/cinco_off.png" style="visibility: hidden" /></div> 
+  <div id="divSix" onclick="press('6')" style="position: fixed;top: 435px;left: 1635px; width:85px; height:80px;z-index:1"><img id="6" src="../images/Tools/calculators/seis_off.png" style="visibility: hidden" /></div> 
+  <div id="divOne" onclick="press('1')" style="position: fixed;top: 535px;left: 1445px; width:85px; height:80px;z-index:1"><img id="1" src="../images/Tools/calculators/uno_off.png" style="visibility: hidden" /></div> 
+  <div id="divTwo" onclick="press('2')" style="position: fixed;top: 535px;left: 1540px; width:85px; height:80px;z-index:1"><img id="2" src="../images/Tools/calculators/dos_off.png" style="visibility: hidden" /></div> 
+  <div id="divThree" onclick="press('3')" style="position: fixed;top: 535px;left: 1635px; width:85px; height:80px;z-index:1"><img id="3" src="../images/Tools/calculators/tres_off.png" style="visibility: hidden" /></div> 
+  <div id="divTotal" onclick="press('=')" style="position: fixed;top: 535px;left: 1734px; width:89px; height:185px;z-index:1"><img id="=" src="../images/Tools/calculators/igual_off.png" style="visibility: hidden" /></div> 
+  <div id="divZero" onclick="press('0')" style="position: fixed;top: 639px;left: 1445px; width:85px; height:80px;z-index:1"><img id="0" src="../images/Tools/calculators/cero_off.png" style="visibility: hidden" /></div> 
+  <div id="divDot" onclick="press('.')" style="position: fixed;top: 639px;left: 1540px; width:85px; height:80px;z-index:1"><img id="." src="../images/Tools/calculators/punto_off.png" style="visibility: hidden" /></div> 
+  <div id="divReset" onclick="press('R')" style="position: fixed;top: 639px;left: 1635px; width:85px; height:80px;z-index:1"><img id="R" src="../images/Tools/calculators/reset-off.png" style="visibility: hidden" /></div> 
+
+  <div id="divFooter">
+    <a href="https://exotictravelers.com/">
+      <img id="bHome" src="../images/boton_home_1.jpg" onclick="go(this.id, '../home.htm')" />
+    </a>
+    <a href="https://www.lomashospitality.com/es/hotel-dorado-royale-en-riviera-maya/">
+      <img id="bRoyal" src="../images/boton_DROY_1.jpg" onclick="" />
+    </a>
+    <a href="https://www.lomashospitality.com/es/hotel-dorado-casitas-en-riviera-maya/">
+      <img id="bCasitas" src="../images/boton_DROYC_1.jpg" onclick="" />
+    </a> 
+    <a href="https://www.lomashospitality.com/es/hotel-dorado-seaside-suites-en-puerto-aventuras/">
+      <img id="bSeaSide" src="../images/boton_DROYSS_1.jpg" onclick="" />
+    </a>  
+    <a href="https://www.lomashospitality.com/es/hotel-dorado-maroma-en-playa-del-carmen/">
+      <img id="bMaroma" src="../images/boton_DROYM_1.jpg" onclick="" />
+    </a> 
+    <a href="https://www.lomashospitality.com/es/hotel-generations-riviera-en-riviera-maya/">
+      <img id="bgrm" src="../images/boton_grm.jpg" onclick="" />     
+    </a> 
+    <a href="https://www.lomashospitality.com/es/hotel-palafitos-en-playa-del-carmen/">
+      <img id="bpalafitos" src="../images/boton_palafitos.jpg" onclick="" />     
+    </a> 
+    <a href="https://www.lomashospitality.com/es/hotel-hidden-beach-en-puerto-aventuras/?partner=9504&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppGGv9jWqaIir_NaW2watEC13WrIOO6bPtInwOtgEEKsQ17TZtNFuSRoCb1EQAvD_BwE">
+      <img id="bpalsm" src="../images/bonon_edsp.jpg" onclick="" />     
+    </a>
+    <a href="https://www.lomashospitality.com/es/hotel-hidden-beach-en-puerto-aventuras/?partner=9504&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppGGv9jWqaIir_NaW2watEC13WrIOO6bPtInwOtgEEKsQ17TZtNFuSRoCb1EQAvD_BwE">
+      <img id="bHidden" src="../images/boton_HB_1.jpg" onclick="" />     
+    </a>   
+         
+    <a href="">
+      <img id="bExotic" src="../images/boton exotic.jpg" onclick="" />
+    </a>      
+      
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+  var i = 0, y = 0, p = 0, newVal = 0, tot = 0, focusId = 0;
+  document.getElementById('t1').focus;
+  e = document.getElementById('t1');
+
+  function go(id, l) {
+    $(id).src = $(id).src.replace("jpg", "gif");
+    var interval = setInterval(function(){ location.href = l; }, 1000);
+  }
+
+  function $(id){
+    return document.getElementById(id);
+  }
+
+  function gotFocus(e){
+    focusId = e;
+  }
+
+  function press(key) {
+    $(key).style.visibility = "visible";
+    var interval = setInterval(function () { $(key).style.visibility = "hidden"; }, 1000);
+    if (key == '=') {
+      calc();
+      return
+    }
+
+    if (key == 'C') {
+      if (focusId == 't1') {
+        document.getElementById('t1').value = "";
+      }
+      if (focusId == 'year') {
+        document.getElementById('year').value = "";
+      }
+      if (focusId == 't2') {
+        document.getElementById('t2').value = "";
+      }
+      return
+    }
+
+    if (key == 'R') {
+      document.getElementById('t1').value = "";
+      document.getElementById('year').value = "";
+      document.getElementById('t2').value = "";
+      document.getElementById('r1').value = "";
+      return
+    }
+
+    if (focusId == 't1') {
+      document.getElementById('t1').value += key;
+    }
+
+    if (focusId == 'year') {
+      document.getElementById('year').value += key;
+    }
+
+    if (focusId == 't2') {
+      document.getElementById('t2').value += key;
+    }
+  }
+
+
+  function calc() {
+    if (document.getElementById('t1').value != '' && document.getElementById('t2').value != '') {
+      y = parseInt(document.getElementById('year').value);
+      p = parseFloat((parseFloat(document.getElementById('t2').value) / 100));
+      i = p * parseFloat(document.getElementById('t1').value);
+      newVal = (parseFloat(document.getElementById('t1').value));
+      tot = newVal;
+      for (j = 1; j < y; j++) {
+        i = newVal * p;
+        newVal += i;
+        tot += newVal;
+      }
+
+      document.getElementById('r1').value = FormatNumber(tot, 0, false, true, true);
+    }
+    else {
+      document.getElementById('r1').value = '';
+    }
+  }
+
+
+  function clean() {
+    document.getElementById('t1').value = '';
+    document.getElementById('t2').value = '';
+    document.getElementById('r1').value = '';
+    document.getElementById('year').value = '';
+  }  
+
+
+  function FormatNumber(num, decimalNum, bolLeadingZero, bolParens, bolCommas)
+  /**********************************************************************
+  IN:
+  NUM - the number to format
+  decimalNum - the number of decimal places to format the number to
+  bolLeadingZero - true / false - display a leading zero for
+  numbers between -1 and 1
+  bolParens - true / false - use parenthesis around negative numbers
+  bolCommas - put commas as number separators.
+ 
+  RETVAL:
+  The formatted number!
+  **********************************************************************/
+  {
+    if (isNaN(parseInt(num))) return "NaN";
+
+    var tmpNum = num;
+    var iSign = num < 0 ? -1 : 1; 	// Get sign of number
+
+    // Adjust number so only the specified number of numbers after
+    // the decimal point are shown.
+    tmpNum *= Math.pow(10, decimalNum);
+    tmpNum = Math.round(Math.abs(tmpNum))
+    tmpNum /= Math.pow(10, decimalNum);
+    tmpNum *= iSign; 				// Readjust for sign
+
+
+    // Create a string object to do our formatting on
+    var tmpNumStr = new String(tmpNum);
+
+    // See if we need to strip out the leading zero or not.
+    if (!bolLeadingZero && num < 1 && num > -1 && num != 0)
+      if (num > 0)
+        tmpNumStr = tmpNumStr.substring(1, tmpNumStr.length);
+      else
+        tmpNumStr = "-" + tmpNumStr.substring(2, tmpNumStr.length);
+
+    // See if we need to put in the commas
+    if (bolCommas && (num >= 1000 || num <= -1000)) {
+      var iStart = tmpNumStr.indexOf(".");
+      if (iStart < 0)
+        iStart = tmpNumStr.length;
+
+      iStart -= 3;
+      while (iStart >= 1) {
+        tmpNumStr = tmpNumStr.substring(0, iStart) + "," + tmpNumStr.substring(iStart, tmpNumStr.length)
+        iStart -= 3;
+      }
+    }
+
+    // See if we need to use parenthesis
+    if (bolParens && num < 0)
+      tmpNumStr = "(" + tmpNumStr.substring(1, tmpNumStr.length) + ")";
+
+    return tmpNumStr; 	// Return our formatted string!
+  }
+  
+  
+</script>
+</html>

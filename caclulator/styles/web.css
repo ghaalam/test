@@ -1,0 +1,283 @@
+body{
+  font-size:24px;
+}
+  
+
+#divContainer
+{
+    position: absolute; 
+    top:0px; 
+    left: 0px; 
+    width:1920px; 
+    height:900px
+}
+
+
+#imgFondo{
+    position: absolute; 
+    top:0px; 
+    left: 0px; 
+    width:1920px; 
+    height:840px;
+    z-index:-9
+}
+
+#imgHeader{
+    position: absolute; 
+    top:0px; 
+    left: 0px;
+    width:1920px;
+    height:120px;
+    z-index:1
+}
+
+#imgSlide{
+    position: absolute;
+    top: 120px;
+    left: 475px;
+    z-index:1
+}  
+
+#webSite{
+    position: absolute;
+    top: 120px;
+    left: 475px;
+    width:1440px; 
+    height:720px;
+    z-index:9
+}  
+
+#divMain{
+    position: absolute;
+    top: 120px;
+    left: 465px;
+}
+
+
+#divFooter{
+    position: absolute;
+    top: 850px;
+    left: 0px;
+}
+
+#bFiveWhys{
+    position: absolute; 
+    top:210px; 
+    left:120px;
+    z-index:1
+}
+
+#bSlideShow{
+    position: absolute; 
+    top:210px; 
+    left:300px;
+    z-index:2
+}
+
+#bOwner{
+    position: absolute; 
+    top:330px; 
+    left:120px;
+    z-index:1
+}
+
+#bWWMembers{
+    position: absolute; 
+    top:330px; 
+    left:300px;
+    z-index:1
+}
+
+#bWork{
+    position: absolute; 
+    top:450px; 
+    left:120px;
+    z-index:1
+}
+
+#bTalking{
+    position: absolute; 
+    top:450px; 
+    left:300px;
+    z-index:1
+}
+
+#bGivingBack{
+    position: absolute; 
+    top:570px; 
+    left:120px;
+    z-index:1
+}
+#bTools{
+    position: absolute; 
+    top:570px; 
+    left:300px;
+    z-index:1
+}
+
+#bOthers{
+    position: absolute; 
+    top:690px; 
+    left:300px;
+    z-index:1
+}
+
+#bSummary{
+    position: absolute; 
+    top:670px; 
+    left:120px;
+    z-index:1
+}
+
+
+#bHome{
+    position: absolute; 
+    top:0px; 
+    left:0px;
+    z-index:1
+}
+
+#b1
+{
+  position: absolute;
+  top:210px; 
+  left:300px;
+  z-index:1
+}
+
+#b2
+{
+  position: absolute;
+  top:330px; 
+  left:300px;
+  z-index:1
+}
+
+#b3
+{
+  position: absolute;
+  top:450px; 
+  left:300px;
+  z-index:1
+}
+
+#b4
+{
+  position: absolute;
+  top:570px; 
+  left:300px;
+  z-index:1
+}
+
+#b5
+{
+  position: absolute;
+  top:700px; 
+  left:300px;
+  z-index:1
+}
+
+#bMain
+{
+  position: absolute;
+  top:700px; 
+  left:120px;
+  z-index:1
+}
+
+#bRoyal{
+    position: absolute; 
+    top:0px; 
+    left:150px;
+    z-index:1
+}
+
+#bCasitas{
+    position: absolute; 
+    top:0px; 
+    left:345px;
+    z-index:1
+}
+
+#bSeaSide{
+    position: absolute; 
+    top:0px; 
+    left:540px;
+    z-index:1
+}
+
+#bMaroma{
+    position: absolute; 
+    top:0px; 
+    left:738px;
+    z-index:1
+}
+
+#bpalsm{
+    position: absolute; 
+    top:0px; 
+    left:935px;
+    z-index:1
+}
+
+#bgrm{
+    position: absolute; 
+    top:0px; 
+    left:1132px;
+    z-index:1
+}
+
+#bpalafitos{
+    position: absolute; 
+    top:0px; 
+    left:1330px;
+    z-index:1
+}
+
+#bHidden{
+    position: absolute; 
+    top:0px; 
+    left:1526px;
+    z-index:1
+}
+
+#bExotic{
+    position: absolute; 
+    top:0px; 
+    left:1722px;
+    width: 200px;
+    height: 112px;
+    z-index:1
+}
+
+.numbers
+{
+  background-position: top;
+  font-size: 58px;
+  font-family: 'Britannic Bold';
+  font-style: normal;
+  font-weight: 900;
+  color: Navy;
+  vertical-align: top;
+  display: table-cell;
+  clip: rect(-10px, auto, auto, auto);
+  overflow: visible;
+  caption-side: top;
+}
+
+.totals
+{
+  font-size: 58px;
+  font-family: 'Britannic Bold';
+  font-style: normal;
+  font-weight: 900;
+  color: #009900;
+}
+
+@-webkit-keyframes slider {
+    0% {background-position: 0px 0px}
+    10% {background-position: 0px 0px}
+    33% {background-position: -465px 0px}
+    66% {background-position: -465px -300px}
+    100% {background-position: 0px -300px}
+}
