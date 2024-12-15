@@ -1,0 +1,183 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d2691e;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f4a460;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    /*background-image: url('fondo.jpg');  Cambia a una imagen real */
+    background-size: cover;
+    background-position: center;
+    color: rgb(226, 164, 17);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    padding: 0 15px;
+}
+
+.gallery {
+    height: 200px; /* Ajusta según el tamaño esperado */
+    background-color: #e03b3b; /* Fondo para identificar el área */
+    max-width: 70%;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.gallery img {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery img.active {
+    display: block;
+}
+
+footer {
+    background-color: #d2691e;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+.form-section {
+background-color: #f9f9f9;
+padding: 20px;
+margin: 20px auto;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    color: #d2691e;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin: 10px 0 5px;
+}
+
+.form-section input, .form-section textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-section button {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-section button:hover {
+    background-color: #a0522d;
+}
+#whatsappButton {
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+    display: block; /* Requerido para usar margin auto */
+    text-align: center;
+}
+
+
+#whatsappButton:hover {
+    background-color: #1da851; /* Un tono más oscuro para el hover */
+}
