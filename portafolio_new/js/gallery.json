@@ -1,0 +1,29 @@
+{
+    "images": [
+        {
+            "filename": "Casitas 1.jpg",
+            "description": "Descripción de la imagen 1"
+        },
+        {
+            "filename": "Casitas 2.jpg",
+            "description": "Descripción de la imagen 2"
+        },
+        {
+            "filename": "Casitas 3.jpg",
+            "description": "Descripción de la imagen 3"
+        },
+        {
+            "filename": "Casitas 4.jpg",
+            "description": "Descripción de la imagen 4"
+        },
+        {
+            "filename": "Casitas 5.jpg",
+            "description": "Descripción de la imagen 5"
+        },
+        {
+            "filename": "Casitas 6.jpg",
+            "description": "Descripción de la imagen 6"
+        }
+        
+    ]
+}
