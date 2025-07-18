@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZaraTV Plus</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Header -->
+  <header class="bg-gray-800 p-4 flex justify-between items-center shadow-md">
+    <img src="logo.jpg" alt="ZaraTV Plus Logo" class="h-12">
+    <nav class="space-x-4">
+      <a href="#paquetes" class="hover:text-yellow-400">Paquetes</a>
+      <a href="#faq" class="hover:text-yellow-400">Preguntas Frecuentes</a>
+      <a href="#reseñas" class="hover:text-yellow-400">Reseñas</a>
+      <a href="#apps" class="hover:text-yellow-400">Aplicaciones</a>
+      <a href="#contacto" class="hover:text-yellow-400">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('fondo1.jpg');">
+    <div class="text-center bg-black bg-opacity-70 p-6 rounded-xl max-w-xl">
+      <h1 class="text-4xl font-bold mb-4 text-yellow-400">Bienvenido a ZaraTV Plus</h1>
+      <p class="mb-6">Disfruta de canales premium, películas y series en cualquier dispositivo</p>
+      <a href="#paquetes" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Ver Paquetes</a>
+    </div>
+  </section>
+
+  <!-- Paquetes -->
+  <section id="paquetes" class="py-12 bg-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Nuestros Paquetes</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-700 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-4">Básico</h3>
+          <p class="mb-4">1 dispositivo, acceso completo</p>
+          <p class="text-yellow-400 text-2xl font-bold mb-4">$100 MXN/mes</p>
+          <a href="#contacto" class="bg-yellow-500 text-black px-4 py-2 rounded">Contratar</a>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl border-4 border-yellow-400">
+          <h3 class="text-xl font-semibold mb-4">Familiar</h3>
+          <p class="mb-4">Hasta 5 dispositivos, 1 año de licencia</p>
+          <p class="text-yellow-400 text-2xl font-bold mb-4">$300 MXN/mes</p>
+          <a href="#contacto" class="bg-yellow-500 text-black px-4 py-2 rounded">Contratar</a>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-4">Dispositivo Extra</h3>
+          <p class="mb-4">Agregar más dispositivos</p>
+          <p class="text-yellow-400 text-2xl font-bold mb-4">$80 MXN/dispositivo</p>
+          <a href="#contacto" class="bg-yellow-500 text-black px-4 py-2 rounded">Agregar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aplicaciones -->
+  <section id="apps" class="py-12 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Aplicaciones Compatibles</h2>
+      <p class="mb-4">ZaraTV Plus funciona con:</p>
+      <ul class="list-disc list-inside text-left mx-auto max-w-md">
+        <li>ZaraTV Plus App</li>
+        <li>IBO Pro Player</li>
+        <li>Otras apps compatibles con códigos M3U</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section id="reseñas" class="py-12 bg-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Lo que dicen nuestros clientes</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 p-4 rounded-xl">
+          <p>“¡Excelente servicio! Nunca me pierdo mis series favoritas.”</p>
+          <span class="text-yellow-400 block mt-2">– Karla M.</span>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-xl">
+          <p>“La calidad es impresionante y el soporte muy rápido.”</p>
+          <span class="text-yellow-400 block mt-2">– Luis R.</span>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-xl">
+          <p>“Me encanta la facilidad para usarlo en la TV y celular.”</p>
+          <span class="text-yellow-400 block mt-2">– Ana P.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-12 bg-gray-900">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Preguntas Frecuentes</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold">¿En cuántos dispositivos puedo usar el servicio?</h3>
+          <p>Depende del paquete contratado. Hasta 5 dispositivos en plan familiar.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">¿Cómo realizo el pago?</h3>
+          <p>Directamente con Mercado Pago o contactándonos.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">¿Requiere internet rápido?</h3>
+          <p>Recomendamos al menos 10 Mbps estables por dispositivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto / Pago -->
+  <section id="contacto" class="py-12 bg-gray-800">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h2>
+      <p class="mb-6">Haz clic para pagar o envíanos un mensaje para más información.</p>
+      <a href="https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=2c93808497db5aae0197ebd47af6067c" target="_blank" class="bg-green-500 px-6 py-3 rounded text-black font-semibold hover:bg-green-400">Pagar con Mercado Pago</a>
+      <div class="mt-6">
+        <a href="https://wa.me/5219541325839" target="_blank" class="underline text-yellow-400">Solicitar información por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center p-4 text-sm">
+    © 2025 ZaraTV Plus. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
