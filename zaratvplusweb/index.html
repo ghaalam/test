@@ -6,6 +6,7 @@
   <title>ZaraTV Plus</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body class="bg-gray-900 text-white" onload="mostrarAppsPorSistema()">
 
@@ -30,11 +31,38 @@
     </div>
   </header>
 
-  <section class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('fondo1.jpg');">
-    <div class="text-center bg-black bg-opacity-70 p-6 rounded-xl max-w-xl">
-      <h1 class="text-4xl font-bold mb-4 text-yellow-400">Bienvenido a ZaraTV Plus</h1>
-      <p class="mb-6">Disfruta de canales premium, películas y series en cualquier dispositivo</p>
-      <a href="#paquetes" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Ver Paquetes</a>
+  <section class="relative h-screen">
+    <div class="swiper mySwiper h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/f1.jpg" class="w-full h-full object-cover" alt="slide1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/superman2025.jpg" class="w-full h-full object-cover" alt="slide2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/jgcalmar.jpeg" class="w-full h-full object-cover" alt="slide3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/Jurassic-World-Rebirth-pelicula-de-cine-2025.avif" class="w-full h-full object-cover"
+            alt="slide3" />
+        </div>
+      </div>
+
+      <!-- Botones de navegación -->
+      <div class="swiper-button-next text-yellow-400"></div>
+      <div class="swiper-button-prev text-yellow-400"></div>
+
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl font-bold text-yellow-400 mb-4">Bienvenido a ZaraTV Plus</h1>
+        <p class="mb-6">Disfruta de canales premium, películas y series en cualquier dispositivo</p>
+        <a href="#paquetes" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Ver Paquetes</a>
+      </div>
     </div>
   </section>
   <section id="paquetes" class="py-12 bg-gray-800">
@@ -45,19 +73,19 @@
         <h3 class="text-xl font-bold text-yellow-400 mb-2">Básico</h3>
         <p>$250 MXN/mes</p>
         <p>1 dispositivo</p>
-        <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Básico+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+        <a href="https://wa.me/529541325839?text=Hola%2C+quiero+contratar+el+paquete+Básico+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
       </div>
       <div class="bg-gray-700 p-4 rounded shadow">
         <h3 class="text-xl font-bold text-yellow-400 mb-2">Familiar</h3>
         <p>$400 MXN/mes</p>
         <p>Hasta 3 dispositivos</p>
-        <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Familiar+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+        <a href="https://wa.me/529541325839?text=Hola%2C+quiero+contratar+el+paquete+Familiar+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
       </div>
       <div class="bg-gray-700 p-4 rounded shadow">
         <h3 class="text-xl font-bold text-yellow-400 mb-2">Premium</h3>
         <p>$600 MXN/mes</p>
         <p>Hasta 5 dispositivos</p>
-        <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Premium+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+        <a href="https://wa.me/529541325839?text=Hola%2C+quiero+contratar+el+paquete+Premium+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
       </div>
     </div>
   </div>
