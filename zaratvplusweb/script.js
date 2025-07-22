@@ -81,4 +81,35 @@ function agregarReseñaAlDOM(reseña) {
   `;
   reseñasContenedor.innerHTML = reseñaHTML + reseñasContenedor.innerHTML;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("main-header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("bg-gray-900", "shadow-lg");
+      header.classList.remove("bg-gray-800");
+    } else {
+      header.classList.remove("bg-gray-900", "shadow-lg");
+      header.classList.add("bg-gray-800");
+    }
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
+
 
