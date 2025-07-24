@@ -1,7 +1,9 @@
 function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('hidden');
-}
+    const menu = document.getElementById('mobile-menu');
+    const button = document.getElementById('menu-toggle');
+    menu.classList.toggle('hidden');
+    button.classList.toggle('open');
+  }
 
 function mostrarAppsPorSistema() {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
