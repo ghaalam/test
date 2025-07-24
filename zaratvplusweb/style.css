@@ -1,7 +1,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
-  padding-top: 64px;
+  top:64px;
 }
 @keyframes fadeSlideUp {
   0% {
@@ -42,27 +42,4 @@ body {
 
 .pulso {
   animation: pulso 2.5s ease-in-out infinite;
-}
-@keyframes slideInDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-slideInDown {
-  animation: slideInDown 0.4s ease-out forwards;
-}
-#menu-toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(6px);
-}
-#menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-#menu-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-6px);
 }
