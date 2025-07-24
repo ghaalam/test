@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,32 +9,42 @@
   <link href="style.css" rel="stylesheet">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
+
 <body class="bg-gray-900 text-white" onload="mostrarAppsPorSistema()">
 
-  <header id="main-header" class="bg-gray-800 fixed top-0 w-full z-50 transition-all duration-300">
-    <div class="flex justify-between items-center max-w-7xl mx-auto">
-      <img src="logo.png" alt="ZaraTV Plus Logo" class="h-12">
-      <button class="md:hidden text-yellow-400 text-3xl" onclick="toggleMenu()">☰</button>
-      <nav class="hidden md:flex space-x-4">
-        <a href="#paquetes" class="hover:text-yellow-400">Paquetes</a>
-        <a href="#faq" class="hover:text-yellow-400">Preguntas Frecuentes</a>
-        <a href="#reseñas" class="hover:text-yellow-400">Reseñas</a>
-        <a href="#apps" class="hover:text-yellow-400">Aplicaciones</a>
-        <a href="#contacto" class="hover:text-yellow-400">Contacto</a>
-      </nav>
-    </div>
-    <div id="mobile-menu" class="md:hidden hidden mt-2 space-y-2 px-4">
-      <a href="#paquetes" class="block text-yellow-400">Paquetes</a>
-      <a href="#faq" class="block text-yellow-400">Preguntas Frecuentes</a>
-      <a href="#reseñas" class="block text-yellow-400">Reseñas</a>
-      <a href="#apps" class="block text-yellow-400">Aplicaciones</a>
-      <a href="#contacto" class="block text-yellow-400">Contacto</a>
-    </div>
-  </header>
+<header id="main-header" class="bg-gray-800 p-4 fixed w-full top-0 z-50 transition-all duration-300">
+  <div class="flex justify-between items-center max-w-7xl mx-auto">
+    <img src="logo.png" alt="ZaraTV Plus Logo" class="h-12">
+    <!-- Botón Hamburguesa Animado -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none z-50 relative w-8 h-8" onclick="toggleMenu()">
+      <span class="block absolute h-0.5 w-full bg-yellow-400 transform transition duration-300 ease-in-out origin-center top-2"></span>
+      <span class="block absolute h-0.5 w-full bg-yellow-400 transform transition duration-300 ease-in-out origin-center top-4"></span>
+      <span class="block absolute h-0.5 w-full bg-yellow-400 transform transition duration-300 ease-in-out origin-center top-6"></span>
+    </button>
+
+    <nav class="hidden md:flex space-x-4">
+      <a href="#paquetes" class="hover:text-yellow-400">Paquetes</a>
+      <a href="#faq" class="hover:text-yellow-400">Preguntas Frecuentes</a>
+      <a href="#reseñas" class="hover:text-yellow-400">Reseñas</a>
+      <a href="#apps" class="hover:text-yellow-400">Aplicaciones</a>
+      <a href="#contacto" class="hover:text-yellow-400">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- MENÚ MÓVIL -->
+  <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-yellow-400 text-2xl z-30 transition-all duration-300">
+    <a href="#paquetes" class="hover:text-yellow-400" onclick="toggleMenu()">Paquetes</a>
+    <a href="#faq" class="hover:text-yellow-400" onclick="toggleMenu()">Preguntas Frecuentes</a>
+    <a href="#reseñas" class="hover:text-yellow-400" onclick="toggleMenu()">Reseñas</a>
+    <a href="#apps" class="hover:text-yellow-400" onclick="toggleMenu()">Aplicaciones</a>
+    <a href="#contacto" class="hover:text-yellow-400" onclick="toggleMenu()">Contacto</a>
+  </nav>
+</header>
+
 
   <section class="relative h-screen">
     <div class="swiper mySwiper h-full">
@@ -49,7 +60,7 @@
         </div>
         <div class="swiper-slide">
           <img src="images/Jurassic-World-Rebirth-pelicula-de-cine-2025.avif" class="w-full h-full object-cover"
-            alt="slide3" />
+            alt="slide4" />
         </div>
       </div>
 
@@ -69,107 +80,115 @@
       </div>
     </div>
   </section>
+
   <section id="paquetes" class="py-12 bg-gray-800">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8">Nuestros Paquetes</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400 mb-2">Básico</h3>
-        <p>$250 MXN/mes</p>
-        <p>1 dispositivo</p>
-        <a href="https://wa.me/529541325839?text=Hola%2C+quiero+contratar+el+paquete+Básico+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
-      </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400 mb-2">Familiar</h3>
-        <p>$400 MXN/mes</p>
-        <p>Hasta 3 dispositivos</p>
-        <a href="https://wa.me/529541325839?text=Hola%2C+quiero+contratar+el+paquete+Familiar+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
-      </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-xl font-bold text-yellow-400 mb-2">Premium</h3>
-        <p>$600 MXN/mes</p>
-        <p>Hasta 5 dispositivos</p>
-        <a href="https://wa.me/529541325839?text=Hola%2C+quiero+contratar+el+paquete+Premium+de+ZaraTV+" class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Nuestros Paquetes</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 p-4 rounded shadow">
+          <h3 class="text-xl font-bold text-yellow-400 mb-2">Básico</h3>
+          <p>$250 MXN/mes</p>
+          <p>1 dispositivo</p>
+          <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Básico+de+ZaraTV+"
+            class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+        </div>
+        <div class="bg-gray-700 p-4 rounded shadow">
+          <h3 class="text-xl font-bold text-yellow-400 mb-2">Familiar</h3>
+          <p>$400 MXN/mes</p>
+          <p>Hasta 3 dispositivos</p>
+          <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Familiar+de+ZaraTV+"
+            class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+        </div>
+        <div class="bg-gray-700 p-4 rounded shadow">
+          <h3 class="text-xl font-bold text-yellow-400 mb-2">Premium</h3>
+          <p>$600 MXN/mes</p>
+          <p>Hasta 5 dispositivos</p>
+          <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Premium+de+ZaraTV+"
+            class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <section id="apps" class="py-12 bg-gray-900">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8">Aplicaciones Compatibles</h2>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Aplicaciones Compatibles</h2>
 
-    <div id="apps-android" class="hidden space-y-4">
-      <img src="https://img.icons8.com/color/96/000000/android-os.png" class="mx-auto mb-2" alt="Android Logo">
-      <p class="text-lg">Descarga la app ZaraTV Plus para Android:</p>
-      <a href="https://clientesapk.top/app/ZaraTv%20Plus.apk" class="text-yellow-400 underline">Descargar APK</a>
-    </div>
-
-    <div id="apps-ios" class="hidden space-y-4">
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/mac-os.png" class="mx-auto mb-2" alt="iOS Logo">
-      <p class="text-lg">Descarga la app para iOS desde la App Store:</p>
-      <a href="https://apps.apple.com/app/ibo-pro-player/id6449647925" class="text-yellow-400 underline">IBO PRO PLAYER</a>
-    </div>
-
-    <div id="apps-windows" class="hidden space-y-4">
-      <img src="https://img.icons8.com/color/96/000000/windows-10.png" class="mx-auto mb-2" alt="Windows Logo">
-      <p class="text-lg">Descarga la app compatible con Windows:</p>
-      <a href="https://rb.gy/8beuu" class="text-yellow-400 underline">(Enlace pendiente)</a>
-    </div>
-
-    <div id="apps-smarttv" class="hidden space-y-4">
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/tv.png" class="mx-auto mb-2" alt="Smart TV Logo">
-      <p class="text-lg">Instala ZaraTV Plus en Smart TV usando Downloader:</p>
-      <p>Código: <span class="font-bold text-yellow-400">4305396</span></p>
-      <ul class="text-sm text-left max-w-xl mx-auto mt-2">
-        <li>1. Abre la app <strong>Downloader</strong> en tu Smart TV.</li>
-        <li>2. Ve a la opción "Browser" o pon el código <strong>4305396</strong>.</li>
-        <li>3. Descarga e instala <strong>ZaraTV Plus</strong>.</li>
-        <li>4. Si no tienes Downloader, descárgala desde la tienda de tu TV.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section id="reseñas" class="py-12 bg-gray-800 text-center">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-8">Lo que dicen nuestros clientes</h2>
-    
-    <div class="grid md:grid-cols-3 gap-6 mb-10">
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <p class="italic">“Excelente servicio, muy estable y buena calidad de canales. Lo recomiendo totalmente.”</p>
-        <p class="mt-2 font-bold">– Carlos M.</p>
+      <div id="apps-android" class="hidden space-y-4">
+        <img src="https://img.icons8.com/color/96/000000/android-os.png" class="mx-auto mb-2" alt="Android Logo">
+        <p class="text-lg">Descarga la app ZaraTV Plus para Android:</p>
+        <a href="https://clientesapk.top/app/ZaraTv%20Plus.apk" class="text-yellow-400 underline">Descargar APK</a>
       </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <p class="italic">“¡Las películas y series están siempre actualizadas! Estoy feliz con el servicio.”</p>
-        <p class="mt-2 font-bold">– Fernanda G.</p>
+
+      <div id="apps-ios" class="hidden space-y-4">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/mac-os.png" class="mx-auto mb-2" alt="iOS Logo">
+        <p class="text-lg">Descarga la app para iOS desde la App Store:</p>
+        <a href="https://apps.apple.com/app/ibo-pro-player/id6449647925" class="text-yellow-400 underline">IBO PRO
+          PLAYER</a>
       </div>
-      <div class="bg-gray-700 p-4 rounded shadow">
-        <p class="italic">“Lo probé en mi Smart TV, celular y laptop sin problemas. Vale la pena.”</p>
-        <p class="mt-2 font-bold">– Javier R.</p>
+
+      <div id="apps-windows" class="hidden space-y-4">
+        <img src="https://img.icons8.com/color/96/000000/windows-10.png" class="mx-auto mb-2" alt="Windows Logo">
+        <p class="text-lg">Descarga la app compatible con Windows:</p>
+        <a href="https://rb.gy/8beuu" class="text-yellow-400 underline">(Enlace pendiente)</a>
+      </div>
+
+      <div id="apps-smarttv" class="hidden space-y-4">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/tv.png" class="mx-auto mb-2" alt="Smart TV Logo">
+        <p class="text-lg">Instala ZaraTV Plus en Smart TV usando Downloader:</p>
+        <p>Código: <span class="font-bold text-yellow-400">4305396</span></p>
+        <ul class="text-sm text-left max-w-xl mx-auto mt-2">
+          <li>1. Abre la app <strong>Downloader</strong> en tu Smart TV.</li>
+          <li>2. Ve a la opción "Browser" o pon el código <strong>4305396</strong>.</li>
+          <li>3. Descarga e instala <strong>ZaraTV Plus</strong>.</li>
+          <li>4. Si no tienes Downloader, descárgala desde la tienda de tu TV.</li>
+        </ul>
       </div>
     </div>
+  </section>
 
-  <div class="max-w-4xl mx-auto text-center px-4">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-6">Reseñas de Nuestros Clientes</h2>
+  <section id="reseñas" class="py-12 bg-gray-800 text-center">
 
-    <form onsubmit="event.preventDefault(); enviarReseñaPorWhatsapp();" class="mb-8 bg-gray-900 p-6 rounded-lg shadow-lg">
-      <div class="mb-4">
-        <input type="text" id="nombre" placeholder="Tu nombre" class="w-full p-2 rounded bg-gray-700 text-white focus:outline-none" />
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-8">Lo que dicen nuestros clientes</h2>
+      <!-- Formulario -->
+      <form id="form-reseña" class="mb-10 bg-gray-800 p-6 rounded shadow-md space-y-4">
+        <input type="text" id="nombre" placeholder="Tu nombre" required
+          class="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        <textarea id="mensaje" placeholder="Tu reseña" required
+          class="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Enviar
+          Reseña</button>
+      </form>
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-6">Reseñas de Nuestros Clientes</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+          <div
+            class="bg-gray-700 p-4 rounded shadow-lg border border-yellow-400 animacion-reseña transform hover:scale-105 transition duration-300">
+            <p class="italic text-white">“Excelente servicio, muy estable y buena calidad de canales. Lo recomiendo
+              totalmente.”</p>
+            <p class="mt-2 font-bold text-yellow-300">– Carlos M.</p>
+          </div>
+
+          <div
+            class="bg-gray-700 p-4 rounded shadow-lg border border-yellow-400 animacion-reseña transform hover:scale-105 transition duration-300">
+            <p class="italic text-white">“¡Las películas y series están siempre actualizadas! Estoy feliz con el
+              servicio.”</p>
+            <p class="mt-2 font-bold text-yellow-300">– Fernanda G.</p>
+          </div>
+
+          <div
+            class="bg-gray-700 p-4 rounded shadow-lg border border-yellow-400 animacion-reseña transform hover:scale-105 transition duration-300">
+            <p class="italic text-white">“Lo probé en mi Smart TV, celular y laptop sin problemas. Vale la pena.”</p>
+            <p class="mt-2 font-bold text-yellow-300">– Javier R.</p>
+          </div>
+        </div>
       </div>
-      <div class="mb-4">
-        <textarea id="mensaje" rows="3" placeholder="Tu reseña" class="w-full p-2 rounded bg-gray-700 text-white focus:outline-none"></textarea>
-      </div>
-      <button type="submit" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded hover:bg-yellow-300 transition">Enviar Reseña</button>
-      <p id="gracias-mensaje" class="text-green-400 mt-4 hidden">¡Gracias por tu reseña! 🙌</p>
-    </form>
+  </section>
 
-    <div id="lista-reseñas" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-left">
-      <!-- Aquí se agregan las reseñas -->
-    </div>
-  </div>
-</section>
-<section id="faq" class="max-w-4xl mx-auto p-6 mt-12 bg-gray-900 rounded-lg shadow-lg">
+  <section id="faq" class="max-w-4xl mx-auto p-6 mt-12 bg-gray-900 rounded-lg shadow-lg">
   <h2 class="text-3xl font-bold text-yellow-400 text-center mb-6">Preguntas Frecuentes</h2>
 
   <!-- Pregunta 1 -->
@@ -230,28 +249,29 @@
 
 <section id="contacto" class="max-w-4xl mx-auto mt-16 p-8 bg-gray-900 rounded-lg shadow-xl">
   <h2 class="text-3xl font-bold text-yellow-400 text-center mb-6">Contáctanos</h2>
-  <p class="text-white text-center mb-6">¿Tienes dudas o necesitas ayuda? Estamos para ti. Escríbenos por WhatsApp o síguenos en nuestras redes sociales:</p>
+  <p class="text-white text-center mb-8">¿Tienes dudas o necesitas ayuda? Escríbenos por WhatsApp o síguenos en nuestras redes sociales:</p>
 
-  <div class="flex justify-center gap-6">
+  <div class="flex flex-wrap justify-center gap-4">
     <!-- WhatsApp -->
-    <a href="https://wa.me/529541325839" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.5 3.5c-2.8-2.8-7.2-2.8-10 0-2.6 2.6-2.8 6.6-.6 9.5L3 21l8-6.9c2.9 2.2 6.9 2 9.5-.6 2.7-2.8 2.7-7.2-.1-10zM12 18.3l-4.4 3.7 1.3-4.7c-1.3-1.6-2-3.6-1.9-5.6.2-3.3 2.9-6 6.2-6 3.4 0 6.1 2.8 6 6.2 0 3.3-2.7 6-6.1 6.1-1.2.1-2.3-.3-3.1-.7l-.8-.4z"/></svg>
+    <a href="https://wa.me/529541325839" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition transform hover:scale-105">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.5 3.5c-2.8-2.8-7.2-2.8-10 0-2.6 2.6-2.8 6.6-.6 9.5L3 21l8-6.9c2.9 2.2 6.9 2 9.5-.6 2.7-2.8 2.7-7.2-.1-10z"/></svg>
       WhatsApp
     </a>
 
     <!-- Facebook -->
-    <a href="https://www.facebook.com/ZaraTVPlus" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+    <a href="https://www.facebook.com/ZaraTVPlus" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition transform hover:scale-105">
       <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.5.7-1.5 1.4v1.7h2.6l-.4 2.9h-2.2v7A10 10 0 0022 12z"/></svg>
       Facebook
     </a>
 
     <!-- Instagram -->
-    <a href="https://www.instagram.com/ZaraTVPlus" target="_blank" class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.3.1 2.2.3 2.9.7.8.4 1.4 1 1.8 1.8.4.7.6 1.6.7 2.9.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.3-.3 2.2-.7 2.9-.4.8-1 1.4-1.8 1.8-.7.4-1.6.6-2.9.7-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.3-.1-2.2-.3-2.9-.7-.8-.4-1.4-1-1.8-1.8-.4-.7-.6-1.6-.7-2.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.3.3-2.2.7-2.9.4-.8 1-1.4 1.8-1.8.7-.4 1.6-.6 2.9-.7C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 .1 5.7.2 4.6.5 3.7 1 2.6 1.5 1.5 2.6 1 3.7c-.5.9-.8 2-1 3.3C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 1.3.5 2.4 1 3.3.5 1.1 1.6 2.2 2.7 2.7.9.5 2 1 3.3 1.1 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.2 2.4-.5 3.3-1.1 1.1-.5 2.2-1.6 2.7-2.7.5-.9.8-2 1-3.3.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-1.3-.5-2.4-1-3.3-.5-1.1-1.6-2.2-2.7-2.7-.9-.5-2-1-3.3-1.1C15.7 0 15.3 0 12 0z"/></svg>
+    <a href="https://www.instagram.com/ZaraTVPlus" target="_blank" class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition transform hover:scale-105">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.3.1 2.2.3 2.9.7.8.4 1.4 1 1.8 1.8.4.7.6 1.6.7 2.9.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.3-.3 2.2-.7 2.9-.4.8-1 1.4-1.8 1.8-.7.4-1.6.6-2.9.7-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.3-.1-2.2-.3-2.9-.7-.8-.4-1.4-1-1.8-1.8-.4-.7-.6-1.6-.7-2.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.3.3-2.2.7-2.9.4-.8 1-1.4 1.8-1.8.7-.4 1.6-.6 2.9-.7C8.4 2.2 8.8 2.2 12 2.2"/></svg>
       Instagram
     </a>
   </div>
 </section>
+
 <!-- Botón flotante de WhatsApp con animación de pulso y hover -->
 <a href="https://wa.me/529541325839" target="_blank"
   class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg transition-all duration-300 transform hover:translate-y-[-5px] pulso">
@@ -261,11 +281,13 @@
 </a>
 
 
+
   <footer class="bg-gray-900 text-center p-4 text-sm">
     © 2025 ZaraTV Plus. Todos los derechos reservados.
   </footer>
 
   <script src="script.js"></script>
-  
+  <!-- Swiper JS -->
 </body>
+
 </html>
