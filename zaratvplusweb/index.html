@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-900 text-white" onload="mostrarAppsPorSistema()">
 
@@ -167,8 +168,97 @@
       <!-- Aquí se agregan las reseñas -->
     </div>
   </div>
-
 </section>
+<section id="faq" class="max-w-4xl mx-auto p-6 mt-12 bg-gray-900 rounded-lg shadow-lg">
+  <h2 class="text-3xl font-bold text-yellow-400 text-center mb-6">Preguntas Frecuentes</h2>
+
+  <!-- Pregunta 1 -->
+  <div class="mb-4 border border-yellow-500 rounded">
+    <button class="w-full flex justify-between items-center p-4 bg-gray-800 text-white font-semibold toggle-faq">
+      ¿En cuántos dispositivos puedo usar el servicio?
+      <span class="icono text-yellow-400 text-xl font-bold">+</span>
+    </button>
+    <div class="faq-content overflow-hidden transition-all duration-500 max-h-0 bg-gray-700 text-white text-sm">
+      Puedes usarlo hasta en 5 dispositivos al mismo tiempo. Puedes agregar más por un pequeño costo adicional.
+    </div>
+  </div>
+
+  <!-- Pregunta 2 -->
+  <div class="mb-4 border border-yellow-500 rounded">
+    <button class="w-full flex justify-between items-center p-4 bg-gray-800 text-white font-semibold toggle-faq">
+      ¿Qué contenido incluye el servicio?
+      <span class="icono text-yellow-400 text-xl font-bold">+</span>
+    </button>
+    <div class="faq-content overflow-hidden transition-all duration-500 max-h-0 bg-gray-700 text-white text-sm">
+      Incluye canales de TV en vivo, películas, series, eventos deportivos y contenido para adultos (opcional).
+    </div>
+  </div>
+
+  <!-- Pregunta 3 -->
+  <div class="mb-4 border border-yellow-500 rounded">
+    <button class="w-full flex justify-between items-center p-4 bg-gray-800 text-white font-semibold toggle-faq">
+      ¿En qué dispositivos puedo ver ZaraTV Plus?
+      <span class="icono text-yellow-400 text-xl font-bold">+</span>
+    </button>
+    <div class="faq-content overflow-hidden transition-all duration-500 max-h-0 bg-gray-700 text-white text-sm">
+      Puedes ver en Android, iPhone, Smart TV, Fire TV, computadoras con Windows y hasta en tablets.
+    </div>
+  </div>
+
+  <!-- Pregunta 4 -->
+  <div class="mb-4 border border-yellow-500 rounded">
+    <button class="w-full flex justify-between items-center p-4 bg-gray-800 text-white font-semibold toggle-faq">
+      ¿Cómo realizo el pago?
+      <span class="icono text-yellow-400 text-xl font-bold">+</span>
+    </button>
+    <div class="faq-content overflow-hidden transition-all duration-500 max-h-0 bg-gray-700 text-white text-sm">
+      Puedes pagar por transferencia, depósito o directamente por WhatsApp. Te daremos los datos al contactarnos.
+    </div>
+  </div>
+
+  <!-- Pregunta 5 -->
+  <div class="mb-4 border border-yellow-500 rounded">
+    <button class="w-full flex justify-between items-center p-4 bg-gray-800 text-white font-semibold toggle-faq">
+      ¿Cómo obtengo soporte si tengo problemas?
+      <span class="icono text-yellow-400 text-xl font-bold">+</span>
+    </button>
+    <div class="faq-content overflow-hidden transition-all duration-500 max-h-0 bg-gray-700 text-white text-sm">
+      Contamos con soporte por WhatsApp disponible los 7 días de la semana. También puedes unirte a nuestra comunidad.
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="max-w-4xl mx-auto mt-16 p-8 bg-gray-900 rounded-lg shadow-xl">
+  <h2 class="text-3xl font-bold text-yellow-400 text-center mb-6">Contáctanos</h2>
+  <p class="text-white text-center mb-6">¿Tienes dudas o necesitas ayuda? Estamos para ti. Escríbenos por WhatsApp o síguenos en nuestras redes sociales:</p>
+
+  <div class="flex justify-center gap-6">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/529541325839" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.5 3.5c-2.8-2.8-7.2-2.8-10 0-2.6 2.6-2.8 6.6-.6 9.5L3 21l8-6.9c2.9 2.2 6.9 2 9.5-.6 2.7-2.8 2.7-7.2-.1-10zM12 18.3l-4.4 3.7 1.3-4.7c-1.3-1.6-2-3.6-1.9-5.6.2-3.3 2.9-6 6.2-6 3.4 0 6.1 2.8 6 6.2 0 3.3-2.7 6-6.1 6.1-1.2.1-2.3-.3-3.1-.7l-.8-.4z"/></svg>
+      WhatsApp
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/ZaraTVPlus" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.5.7-1.5 1.4v1.7h2.6l-.4 2.9h-2.2v7A10 10 0 0022 12z"/></svg>
+      Facebook
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/ZaraTVPlus" target="_blank" class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.3.1 2.2.3 2.9.7.8.4 1.4 1 1.8 1.8.4.7.6 1.6.7 2.9.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.3-.3 2.2-.7 2.9-.4.8-1 1.4-1.8 1.8-.7.4-1.6.6-2.9.7-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.3-.1-2.2-.3-2.9-.7-.8-.4-1.4-1-1.8-1.8-.4-.7-.6-1.6-.7-2.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.3.3-2.2.7-2.9.4-.8 1-1.4 1.8-1.8.7-.4 1.6-.6 2.9-.7C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 .1 5.7.2 4.6.5 3.7 1 2.6 1.5 1.5 2.6 1 3.7c-.5.9-.8 2-1 3.3C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 1.3.5 2.4 1 3.3.5 1.1 1.6 2.2 2.7 2.7.9.5 2 1 3.3 1.1 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.2 2.4-.5 3.3-1.1 1.1-.5 2.2-1.6 2.7-2.7.5-.9.8-2 1-3.3.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-1.3-.5-2.4-1-3.3-.5-1.1-1.6-2.2-2.7-2.7-.9-.5-2-1-3.3-1.1C15.7 0 15.3 0 12 0z"/></svg>
+      Instagram
+    </a>
+  </div>
+</section>
+<!-- Botón flotante de WhatsApp con animación de pulso y hover -->
+<a href="https://wa.me/529541325839" target="_blank"
+  class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg transition-all duration-300 transform hover:translate-y-[-5px] pulso">
+  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.5 3.5c-2.8-2.8-7.2-2.8-10 0-2.6 2.6-2.8 6.6-.6 9.5L3 21l8-6.9c2.9 2.2 6.9 2 9.5-.6 2.7-2.8 2.7-7.2-.1-10z"/>
+  </svg>
+</a>
 
 
   <footer class="bg-gray-900 text-center p-4 text-sm">
