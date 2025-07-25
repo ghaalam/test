@@ -26,6 +26,16 @@ body {
 
 .faq-content {
   transition: max-height 0.5s ease, padding 0.5s ease;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem; /* Solo padding horizontal por defecto */
+  line-height: 1.6; /* Para mejor lectura en móvil */
+}
+
+/* Cuando está abierta, se le aplica esta clase */
+.faq-content.abierta {
+  max-height: 300px; /* o un valor que sepas que cubre la mayoría de las respuestas */
+  padding: 1rem;      /* Agrega padding vertical al expandir */
 }
 
 @keyframes pulso {
