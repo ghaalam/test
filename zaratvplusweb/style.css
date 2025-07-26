@@ -34,7 +34,7 @@ body {
 
 /* Cuando está abierta, se le aplica esta clase */
 .faq-content.abierta {
-  max-height: 300px; /* o un valor que sepas que cubre la mayoría de las respuestas */
+  max-height: 100%; /* o un valor que sepas que cubre la mayoría de las respuestas */
   padding: 1rem;      /* Agrega padding vertical al expandir */
 }
 
