@@ -118,17 +118,17 @@ function guardarReseña() {
   // Agregar al DOM sin recargar
   agregarReseñaAlDOM(nuevaReseña);
 
-  // Enviar a Google Sheets
-  fetch('https://script.google.com/macros/s/AKfycbyg5UK6oXdVvbs_6QJWKMPuQBhvWNFL2pIEwGEhHmIT1_pRXRoS1xI9mtUiO0RMBP6M/exec', {
-    method: 'POST',
-    body: JSON.stringify(nuevaReseña),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(res => res.json())
-  .then(data => console.log("✔ Guardado en Sheets:", data))
-  .catch(err => console.error("❌ Error al guardar en Sheets:", err));
+// Enviar a Google Sheets evitando CORS
+fetch('https://script.google.com/macros/s/AKfycbxxr02hrpphEfjnWjOYNbijaEPts2TiMKWcLwVQnEf6UGy0ViIE6EeWtOHaKkwdzaqp/exec', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'text/plain;charset=utf-8' // ✅ Evita preflight CORS
+  },
+  body: JSON.stringify(nuevaReseña) // Sigue enviando JSON, pero como texto plano
+})
+.then(res => res.json())
+.then(data => console.log("✅ Reseña guardada en Sheets:", data))
+.catch(err => console.error("❌ Error al guardar en Sheets:", err));
 
   // Limpiar campos
   document.getElementById('form-reseña').reset();
