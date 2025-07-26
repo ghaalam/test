@@ -121,32 +121,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 document.querySelectorAll('.toggle-faq').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const content = btn.nextElementSibling;
-      const icono = btn.querySelector('.icono');
+  btn.addEventListener('click', () => {
+    const contenidoActual = btn.nextElementSibling;
+    const iconoActual = btn.querySelector('.icono');
 
-      // Cerrar todos los demás
-      document.querySelectorAll('.faq-content').forEach(el => {
-        if (el !== content) {
-          el.style.maxHeight = null;
-          el.style.padding = '0';
-        }
-      });
-      document.querySelectorAll('.toggle-faq .icono').forEach(ic => {
-        if (ic !== icono) ic.textContent = "+";
-      });
-
-      // Abrir o cerrar el actual
-      const abierto = content.style.maxHeight;
-      if (abierto) {
-        content.style.maxHeight = null;
-        content.style.padding = '0';
-        icono.textContent = "+";
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.padding = '1rem';
-        icono.textContent = "−";
+    // Cerrar todas las preguntas primero
+    document.querySelectorAll('.faq-content').forEach(contenido => {
+      if (contenido !== contenidoActual) {
+        contenido.classList.remove('abierta');
+        contenido.previousElementSibling.querySelector('.icono').textContent = '+';
       }
     });
+
+    // Alternar la actual
+    const estaAbierta = contenidoActual.classList.contains('abierta');
+    contenidoActual.classList.toggle('abierta');
+    iconoActual.textContent = estaAbierta ? '+' : '−';
   });
+});
   
