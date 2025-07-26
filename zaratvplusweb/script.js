@@ -68,7 +68,7 @@ function mostrarReseñasDesdeLocalStorage() {
 
 
 
-function enviarReseñaPorWhatsapp() {
+/*function enviarReseñaPorWhatsapp() {
   const nombre = document.getElementById('nombre').value.trim();
   const mensaje = document.getElementById('mensaje').value.trim();
   const gracias = document.getElementById('gracias-mensaje');
@@ -85,21 +85,59 @@ function enviarReseñaPorWhatsapp() {
   // Abrir WhatsApp
   window.open(url, '_blank');
 
-  // Guardar en localStorage
+ 
+   // Crear nueva reseña
   const nuevaReseña = { nombre, mensaje };
+  // Guardar en localStorage
+  let reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+  reseñas.push(nuevaReseña);
+  localStorage.setItem("reseñas", JSON.stringify(reseñas));
+  // Agregar al DOM sin recargar
+  agregarReseñaAlDOM(nuevaReseña); // ← 🔥 Esta línea es la clave
+
+  // Limpiar campos
+document.getElementById('form-reseña').reset();
+}*/
+function guardarReseña() {
+  const nombre = document.getElementById('nombre').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
+  const gracias = document.getElementById('gracias-mensaje');
+
+  if (!nombre || !mensaje) return;
+
+  const nuevaReseña = { nombre, mensaje };
+
+  // Mostrar mensaje de agradecimiento
+  gracias.classList.remove('hidden');
+
+  // Guardar en localStorage (opcional)
   let reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
   reseñas.push(nuevaReseña);
   localStorage.setItem("reseñas", JSON.stringify(reseñas));
 
+  // Agregar al DOM sin recargar
+  agregarReseñaAlDOM(nuevaReseña);
+
+  // Enviar a Google Sheets
+  fetch('https://script.google.com/macros/s/AKfycbxxr02hrpphEfjnWjOYNbijaEPts2TiMKWcLwVQnEf6UGy0ViIE6EeWtOHaKkwdzaqp/exec', {
+    method: 'POST',
+    body: JSON.stringify({ nombre: "David", mensaje: "Hola desde prueba local" }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(data => console.log("✔ Guardado en Sheets:", data))
+  .catch(err => console.error("❌ Error al guardar en Sheets:", err));
 
   // Limpiar campos
-document.getElementById('form-reseña').reset();
+  document.getElementById('form-reseña').reset();
 }
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-reseña');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    enviarReseñaPorWhatsapp();
+    guardarReseña();
   });
 });
 
@@ -118,7 +156,6 @@ function agregarReseñaAlDOM(reseña) {
   `;
   reseñasContenedor.innerHTML = reseñaHTML + reseñasContenedor.innerHTML;
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("main-header");
