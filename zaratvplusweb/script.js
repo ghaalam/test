@@ -121,7 +121,7 @@ function guardarReseña() {
   // Enviar a Google Sheets
   fetch('https://script.google.com/macros/s/AKfycbxxr02hrpphEfjnWjOYNbijaEPts2TiMKWcLwVQnEf6UGy0ViIE6EeWtOHaKkwdzaqp/exec', {
     method: 'POST',
-    body: JSON.stringify({ nombre: "David", mensaje: "Hola desde prueba local" }),
+    body: JSON.stringify(nuevaReseña),
     headers: {
       'Content-Type': 'application/json'
     }
