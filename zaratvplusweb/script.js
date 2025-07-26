@@ -34,14 +34,38 @@ function mostrarAppsPorSistema() {
     appsSmartTV.classList.remove('hidden');
   }
 
-  mostrarReseñasDesdeLocalStorage(); // ← cargar reseñas al cargar la página
+  
 }
 document.addEventListener('DOMContentLoaded', () => {
+  mostrarReseñasDesdeLocalStorage(); // ← cargar reseñas al cargar la página
+
   const reseñas = document.querySelectorAll('.animacion-reseña');
   reseñas.forEach((el, i) => {
     el.style.animationDelay = `${i * 0.3}s`;
   });
 });
+function mostrarReseñasDesdeLocalStorage() {
+  const contenedor = document.getElementById("lista-reseñas");
+  if (!contenedor) return;
+
+  const reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+
+  reseñas.reverse().forEach((r) => {
+    const reseñaHTML = `
+      <div class="bg-gray-700 border border-yellow-400 rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300 animacion-reseña">
+        <div class="flex items-center mb-2">
+          <svg class="w-6 h-6 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 1l7.997 4.884v8.232L10 19l-7.997-4.884V5.884z" />
+          </svg>
+          <h4 class="text-yellow-300 font-semibold text-lg">${r.nombre}</h4>
+        </div>
+        <p class="text-sm text-white italic">“${r.mensaje}”</p>
+      </div>
+    `;
+    contenedor.innerHTML += reseñaHTML;
+  });
+}
+
 
 
 function enviarReseñaPorWhatsapp() {
@@ -53,7 +77,7 @@ function enviarReseñaPorWhatsapp() {
 
   const texto = `Hola, soy ${nombre} y quiero dejar esta reseña:\n\n"${mensaje}"`;
   const telefono = "529541325839"; // ← Reemplaza con tu número real
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+  const url = `https://wa.me/529541325839?text=${encodeURIComponent(texto)}`;
 
   // Mostrar mensaje de agradecimiento
   gracias.classList.remove('hidden');
@@ -67,29 +91,35 @@ function enviarReseñaPorWhatsapp() {
   reseñas.push(nuevaReseña);
   localStorage.setItem("reseñas", JSON.stringify(reseñas));
 
-  // Mostrar en pantalla
-  agregarReseñaAlDOM(nuevaReseña);
 
   // Limpiar campos
-  document.getElementById('nombre').value = "";
-  document.getElementById('mensaje').value = "";
+document.getElementById('form-reseña').reset();
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form-reseña');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    enviarReseñaPorWhatsapp();
+  });
+});
 
 function agregarReseñaAlDOM(reseña) {
   const reseñasContenedor = document.getElementById('lista-reseñas');
   const reseñaHTML = `
-    <div class="bg-gray-700 border border-yellow-400 rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300 animacion-reseña">
+    <div class="bg-gray-700 border border-yellow-400 rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300 animacion-reseña max-w-xs w-full break-words mx-auto">
       <div class="flex items-center mb-2">
-        <svg class="w-6 h-6 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <svg class="w-6 h-6 text-yellow-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
           <path d="M2.003 5.884L10 1l7.997 4.884v8.232L10 19l-7.997-4.884V5.884z" />
         </svg>
-        <h4 class="text-yellow-300 font-semibold text-lg">${reseña.nombre}</h4>
+        <h4 class="text-yellow-300 font-semibold text-lg truncate w-full">${reseña.nombre}</h4>
       </div>
       <p class="text-sm text-white italic">“${reseña.mensaje}”</p>
     </div>
   `;
   reseñasContenedor.innerHTML = reseñaHTML + reseñasContenedor.innerHTML;
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("main-header");
 
@@ -139,4 +169,5 @@ document.querySelectorAll('.toggle-faq').forEach(btn => {
     iconoActual.textContent = estaAbierta ? '+' : '−';
   });
 });
-  
+
+
