@@ -89,21 +89,21 @@
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Básico</h3>
           <p>$250 MXN/mes</p>
           <p>1 dispositivo</p>
-          <a href="https://wa.me/5219541325839?text=Hola%2C+quiero+contratar+el+paquete+Básico+de+ZaraTV+"
+          <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Básico+de+ZaraTV+"
             class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
         </div>
         <div class="bg-gray-700 p-4 rounded shadow">
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Familiar</h3>
           <p>$400 MXN/mes</p>
           <p>Hasta 3 dispositivos</p>
-          <a href="https://wa.me/5219541325839?text=Hola%2C+quiero+contratar+el+paquete+Familiar+de+ZaraTV+"
+          <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Familiar+de+ZaraTV+"
             class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
         </div>
         <div class="bg-gray-700 p-4 rounded shadow">
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Premium</h3>
           <p>$600 MXN/mes</p>
           <p>Hasta 5 dispositivos</p>
-          <a href="https://wa.me/5219541325839?text=Hola%2C+quiero+contratar+el+paquete+Premium+de+ZaraTV+"
+          <a href="https://wa.me/5219999999999?text=Hola%2C+quiero+contratar+el+paquete+Premium+de+ZaraTV+"
             class="mt-4 inline-block bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Contratar</a>
         </div>
       </div>
@@ -150,18 +150,24 @@
 
   <section id="reseñas" class="py-12 bg-gray-800 text-center">
 
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-3xl font-bold text-yellow-400 mb-8">Lo que dicen nuestros clientes</h2>
-      <!-- Formulario -->
-      <form id="form-reseña" class="mb-10 bg-gray-800 p-6 rounded shadow-md space-y-4">
-        <input type="text" id="nombre" placeholder="Tu nombre" required
-          class="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-        <textarea id="mensaje" placeholder="Tu reseña" required
-          class="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
-        <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">Enviar
-          Reseña</button>
-      </form>
-      <p id="gracias-mensaje" class="hidden text-green-400 mt-4">¡Gracias por tu reseña!</p>
+   <div class="max-w-4xl mx-auto text-center px-4">
+  <h2 class="text-3xl font-bold text-yellow-400 mb-8">Lo que dicen nuestros clientes</h2>
+
+  <!-- Formulario -->
+<form id="form-reseña" class="mb-10 bg-gray-700 p-6 rounded-lg shadow-lg ring-1 ring-yellow-400 space-y-4">
+    <input type="text" id="nombre" placeholder="Tu nombre" required
+      class="w-full p-2 rounded border border-yellow-400 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+
+    <textarea id="mensaje" placeholder="Tu reseña" required
+      class="w-full p-2 rounded border border-yellow-400 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+
+    <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition-all">
+      Enviar Reseña
+    </button>
+  </form>
+  <p id="gracias-mensaje" class="hidden text-green-400 mt-4">¡Gracias por tu reseña!</p>
+</div>
+
       <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-yellow-400 mb-6">Reseñas de Nuestros Clientes</h2>
 
@@ -186,10 +192,11 @@
             <p class="mt-2 font-bold text-yellow-300">– Javier R.</p>
           </div>
         </div>
+        <div id="lista-reseñas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10"></div>
       </div>
   </section>
 
-    <section id="faq" class="max-w-4xl mx-auto p-6 mt-12 bg-gray-900 rounded-lg shadow-lg">
+  <section id="faq" class="max-w-4xl mx-auto p-6 mt-12 bg-gray-900 rounded-lg shadow-lg">
   <h2 class="text-3xl font-bold text-yellow-400 text-center mb-6">Preguntas Frecuentes</h2>
 
   <!-- Pregunta 1 -->
@@ -242,7 +249,7 @@
       ¿Cómo obtengo soporte si tengo problemas?
       <span class="icono text-yellow-400 text-xl font-bold">+</span>
     </button>
-    <div class="faq-content bg-gray-700 text-white text-sm leading-relaxed">
+    <div class="faq-content overflow-hidden transition-all duration-500 max-h-0 bg-gray-700 text-white text-sm">
       Contamos con soporte por WhatsApp disponible los 7 días de la semana. También puedes unirte a nuestra comunidad.
     </div>
   </div>
