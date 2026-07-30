@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .experiencias-body{
     background-color: var(--primary-color);
     color: var(--text-color-inverse);
@@ -12,113 +13,98 @@
     position: relative;
     top: 2px;
 }
+
 .wave_bottom{
     transform: scaleY(-1);
     top: -2px;
 }
-.experiencias-title {
+
+.experiencias-title{
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
     margin: 25px;
-  }
-  
-  .experiencia-date {
+}
+
+.experiencia-date{
     font-size: 25px;
     font-weight: bold;
     color: var(--secundary-color);
-  }
-  
-  .experiencia-company {
+}
+
+.experiencia-company{
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 5px;
-  }
-  
-  .experiencia-position {
+}
+
+.experiencia-position{
     font-weight: 500;
     font-size: 18px;
     margin-top: 20px;
-  }
-  
-  .experiencia-description {
+}
+
+.experiencia-description{
     font-weight: 400;
     font-size: 15px;
     margin-top: 10px;
-  }
-  
-  .experiencia {
+    line-height: 1.7;
+    text-align: justify;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+}
+
+.experiencia{
     padding: 25px;
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 auto;
-  }
+}
 
-  @media(min-width: 950px){
-    .experiencias-title {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 30px;
-        margin: 25px;
-      }
-      
-      .experiencia-date {
-        font-size: 25px;
+@media (min-width: 950px){
 
-        
-      }
-      
-      .experiencia-company {
-        font-size: 20px;
-      }
-      
-      .experiencia-position {
-        font-weight: 500;
-        font-size: 18px;
-        margin-top: 20px;
-      }
-      
-      .experiencia-description {
-        font-weight: 400;
-        font-size: 15px;
-        margin-top: 10px;
-      }
-      .experiencia {
+    .experiencias-grid{
+        display: grid;
+        grid-template-columns: auto 2px auto;
+        gap: 20px 70px;
+        padding: 70px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .experiencia{
         padding: 0;
-      }
-      .xperiencia_left{
-          text-align: right;
-      }
+        max-width: 650px;
+    }
 
-      .experiencias-grid{
-          display: grid;
-          grid-template-columns: auto 2px auto; 
-          gap: 20px 70px;
-          padding: 70px;
-          justify-content: center;
-          max-width: 980px;
-          margin: 0 auto;
-      }
-      .line{
-          background-color: var(--text-color-inverse);
+    /* CORREGIDO */
+    .experiencia_left{
+        text-align: right;
+    }
+
+    .line{
+        background-color: var(--text-color-inverse);
         position: relative;
-        }
-      .line::before,
-      .line::after{
-          content: "";
-          display: block;
-          width: 20px;
-          height: 20px;
-          background-color: var(--text-color-inverse);
-          border-radius: 50%;
+    }
 
-          position: absolute;
-          top: -20px;
-          left: -9px;
-      }
-      .line::after{
-          top: 100%;
-          z-index: 1;
-      }
-  }
+    .line::before,
+    .line::after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: var(--text-color-inverse);
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        left: -9px;
+    }
+
+    .line::after{
+        top: 100%;
+        z-index: 1;
+    }
+}
